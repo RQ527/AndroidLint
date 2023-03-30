@@ -4,21 +4,18 @@ buildscript {
         mavenLocal()
         mavenCentral()
         google()
-        jcenter()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$agp_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.github.rocketzly:lintplugin:$publish_version"
+//        classpath "com.github.rocketzly:lintplugin:$publish_version"
     }
 }
-
 allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
         google()
-        jcenter()
     }
 }
 
@@ -34,9 +31,9 @@ subprojects { p ->
                              'android-gradle-v7_0']
     if (!uploadProjectList.contains(p.name)) return
     //添加上传脚本
-    afterEvaluate {
-        p.apply from: "${rootProject.rootDir.absolutePath}/publish-mavencentral.gradle"
-    }
+//    afterEvaluate {
+//        p.apply from: "${rootProject.rootDir.absolutePath}/publish-mavencentral.gradle"
+//    }
 }
 
 task clean(type: Delete) {

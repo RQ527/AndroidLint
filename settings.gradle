@@ -1,4 +1,12 @@
-rootProject.name = 'Android Lint'
+pluginManagement {
+    repositories {
+        mavenLocal()
+        gradlePluginPortal()
+        mavenCentral()
+        google()
+    }
+}
+rootProject.name = 'AndroidLint'
 include ':app'
 include ':checks'
 include ':lintlibrary'

@@ -1,14 +1,17 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'com.github.rocketzly.lintplugin'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+//    id('com.github.rocketzly.lintplugin')
+}
+//apply plugin: 'com.github.rocketzly.lintplugin'
 
 android {
-    compileSdk 29
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.rocketzly.androidlint"
-        minSdkVersion 16
-        targetSdkVersion 29
+        minSdk 16
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
