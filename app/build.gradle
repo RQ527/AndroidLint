@@ -1,9 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-//    id('com.github.rocketzly.lintplugin')
+    id('com.github.rocketzly.lintplugin')
 }
-//apply plugin: 'com.github.rocketzly.lintplugin'
 
 android {
     compileSdk 31

@@ -8,7 +8,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$agp_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-//        classpath "com.github.rocketzly:lintplugin:$publish_version"
+        classpath "com.github.rocketzly:lintplugin:$publish_version"
     }
 }
 allprojects {
@@ -17,23 +17,6 @@ allprojects {
         mavenCentral()
         google()
     }
-}
-
-subprojects { p ->
-    //需要上传项目列表
-    def uploadProjectList = ['lintplugin',
-                             'lintlibrary',
-                             'android-gradle-api',
-                             'android-gradle-compat',
-                             'android-gradle-v3_6',
-                             'android-gradle-v4_0',
-                             'android-gradle-v4_1',
-                             'android-gradle-v7_0']
-    if (!uploadProjectList.contains(p.name)) return
-    //添加上传脚本
-//    afterEvaluate {
-//        p.apply from: "${rootProject.rootDir.absolutePath}/publish-mavencentral.gradle"
-//    }
 }
 
 task clean(type: Delete) {
